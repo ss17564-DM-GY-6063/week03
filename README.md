@@ -1,5 +1,8 @@
 # p5.js Template
 
+Image on repo
+![DRDU4b.jpg](https://imgpile.com/images/DRDU4b.jpg)
+
 This is a README file that can be used to describe and document your assignment.
 
 Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
