@@ -1,7 +1,8 @@
 // week 03 code
 
-let eDiam = 50;
-let maxDiam = 50;
+// let eDiam = 50;
+let maxDiam = 100;
+let minDiam = maxDiam / 10;
 
 
 function setup() {
@@ -9,28 +10,24 @@ function setup() {
 }
 
 function draw() {
+    // print(minDiam, maxDiam);
     background(200,200,200);
   fill("pink");
  
-//   xpos = xpos + eDiam
-//   xpos += eDiam
-//   xpos *= 2
 
-  for (let xpos = 0; xpos <= width; xpos += eDiam){
-    for (let ypos = 0; ypos <= height; ypos += eDiam) {
-        for (let dim = maxDiam; dim > 5; dim -= 8){
-            ellipse(xpos, ypos, dim, dim);
+  for (let xpos = 0; xpos <= width; xpos += 2 * maxDiam){
+    for (let ypos = 0; ypos <= height; ypos += 2 * maxDiam) {
+        let tDiam = random(minDiam, maxDiam);
+            ellipse(xpos, ypos, tDiam, tDiam);
         }
     } 
  }
 
- for (let dim = eDiam; dim > 5; dim -= 8){
-    ellipse(width/2, height/2, dim)
- }
+
 
 
     
-}
+
 
 
 
