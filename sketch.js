@@ -1,33 +1,37 @@
 // week 03 code
 
-let xpos = 150;
-let ypos = 200;
+let eDiam = 50;
+let maxDiam = 50;
 
-let rectwidth = 300;
-let rectheight = 200;
 
 function setup() {
     createCanvas(600, 600);
 }
 
 function draw() {
-    background(200,20,20);
-  
-    // (xpos + rectwidth) > mouseX > xpos
-    // xpos < mouseX <(xpos + rectwidth)
-    if (mouseX > xpos && 
-        mouseX <(xpos + rectwidth) && 
-        mouseY > ypos && 
-        mouseY < (ypos +rectheight)
-        ){
-        fill(20,200,20);
-    }else{
-        fill(255);
-    }
+    background(200,200,200);
+  fill("pink");
+ 
+//   xpos = xpos + eDiam
+//   xpos += eDiam
+//   xpos *= 2
+
+  for (let xpos = 0; xpos <= width; xpos += eDiam){
+    for (let ypos = 0; ypos <= height; ypos += eDiam) {
+        for (let dim = maxDiam; dim > 5; dim -= 8){
+            ellipse(xpos, ypos, dim, dim);
+        }
+    } 
+ }
+
+ for (let dim = eDiam; dim > 5; dim -= 8){
+    ellipse(width/2, height/2, dim)
+ }
 
 
-    rect(xpos, ypos, rectwidth, rectheight);
+    
 }
+
 
 
 
